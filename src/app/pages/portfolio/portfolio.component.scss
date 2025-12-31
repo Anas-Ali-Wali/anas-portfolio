@@ -1,0 +1,29 @@
+/* Fade-in effect for smooth appearance */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+section {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.bg-slate-800\/60:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+h1, h2 {
+  font-family: 'Poppins', sans-serif;
+}

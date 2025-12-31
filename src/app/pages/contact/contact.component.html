@@ -1,0 +1,56 @@
+<section
+  class="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white px-6 py-16 flex items-center justify-center">
+
+  <!-- Contact Form -->
+  <div class="w-full max-w-4xl mt-12">
+    <div class="bg-slate-700/80 backdrop-blur-md p-6 rounded-xl shadow-xl">
+      <h2 class="text-2xl font-semibold mb-4">Send a message</h2>
+
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-sm mb-1">Name</label>
+            <input formControlName="name" class="w-full p-2 rounded bg-slate-600/60 border border-slate-500" />
+            <div *ngIf="(contactForm.get('name')?.touched || contactForm.get('name')?.dirty || submitted) && contactForm.get('name')?.invalid">
+              <small class="text-red-400" *ngIf="contactForm.get('name')?.hasError('required')">Please enter your name.</small>
+              <small class="text-red-400" *ngIf="contactForm.get('name')?.hasError('minlength')">Name is too short.</small>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-sm mb-1">Email</label>
+            <input formControlName="email" type="email" class="w-full p-2 rounded bg-slate-600/60 border border-slate-500" />
+            <div *ngIf="(contactForm.get('email')?.touched || contactForm.get('email')?.dirty || submitted) && contactForm.get('email')?.invalid">
+              <small class="text-red-400" *ngIf="contactForm.get('email')?.hasError('required')">Email is required.</small>
+              <small class="text-red-400" *ngIf="contactForm.get('email')?.hasError('email')">Enter a valid email.</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <label class="block text-sm mb-1">Message</label>
+          <textarea formControlName="message" rows="5" class="w-full p-2 rounded bg-slate-600/60 border border-slate-500"></textarea>
+          <div *ngIf="(contactForm.get('message')?.touched || contactForm.get('message')?.dirty || submitted) && contactForm.get('message')?.invalid">
+            <small class="text-red-400" *ngIf="contactForm.get('message')?.hasError('required')">Please enter a message.</small>
+            <small class="text-red-400" *ngIf="contactForm.get('message')?.hasError('minlength')">Message must be at least 10 characters.</small>
+          </div>
+        </div>
+
+        <div class="mt-6 flex items-center gap-4">
+          <button type="submit" [disabled]="sending"
+            class="bg-orange-400 text-slate-900 px-4 py-2 rounded font-semibold hover:opacity-90 transition-all duration-300">
+            <span *ngIf="!sending">Send Message</span>
+            <span *ngIf="sending">Sending...</span>
+          </button>
+
+          <div *ngIf="success" class="text-green-300">Message sent — thank you!</div>
+          <div *ngIf="errorMessage" class="text-red-400">{{ errorMessage }}</div>
+        </div>
+      </form>
+
+      <p class="text-xs text-slate-300 mt-3">
+        Your message will be delivered directly to my inbox — I’ll get back to you as soon as possible.
+      </p>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,8 @@
+.site-footer{padding:1rem;text-align:center;color:#666}
+
+/* Ensure footer buttons are visually consistent on small screens */
+.site-footer a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}

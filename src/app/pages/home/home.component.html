@@ -1,0 +1,109 @@
+<section class="min-h-screen bg-gradient-to-br from-slate-900 to-black text-white px-6 py-16" >
+    <div @fadeSlide class="max-w-6xl mx-auto grid gap-12 items-center md:grid-cols-2">
+        <!-- Left / Text -->
+        <div class="space-y-6 text-left">
+            <h1
+                class="text-5xl md:text-6xl font-extrabold leading-tight text-white drop-shadow-2xl tracking-tight antialiased">
+                Anas Ali</h1>
+            <p class="text-orange-400 text-lg font-semibold">Angular Developer | ASP.NET Core & SQL Server (Basic)</p>
+
+            <p class="text-gray-300 max-w-2xl">
+                I am a passionate <strong class="text-white">Angular Developer</strong> with over <strong
+                    class="text-white">1 year of professional experience</strong> at <strong>Persistent
+                    Solutions</strong>.
+                My primary focus is building modern, responsive, and scalable web applications using <strong>Angular
+                    16</strong>.
+                I also have hands-on experience with <strong>ASP.NET Core 8</strong> RESTful APIs and <strong>SQL
+                    Server</strong> at a basic level.
+            </p>
+            <div class="flex flex-wrap gap-3">
+                <a href="assets/pdf/ANAS ALI CV.pdf.pdf" download="Anas_Ali_Resume.pdf"
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 hover:bg-orange-600 rounded-md text-black font-semibold">
+                    Download Resume
+                </a>
+                <a class="inline-flex items-center gap-2 px-4 py-2 border border-gray-700 rounded-md text-gray-200 hover:text-white"
+                    routerLink="/contact">Contact</a>   
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
+                <div class="bg-slate-800/60 p-4 rounded-lg">
+                    <h3 class="text-sm text-gray-300 uppercase">Professional Experience</h3>
+                    <p class="mt-2 text-gray-200"> Angular Developer — 1+ year of experience at Persistent Solutions,
+                        working on enterprise-level web applications.
+                        Skilled in Angular 16, component architecture, reusable services, state management, and clean
+                        folder structures.
+                        Basic understanding of ASP.NET Core APIs and SQL database integration.</p>
+                </div>
+                <div class="bg-slate-800/60 p-4 rounded-lg">
+                    <h3 class="text-sm text-gray-300 uppercase">Core Projects & Domains</h3>
+                    <ul class="mt-2 text-gray-200 list-disc ml-5 space-y-1">
+                        <li>FMS (Financial Management System)</li>
+                        <li>CMS / DMS / Invoices & Billing</li>
+                        <li>Custom Financial Reports & Ledgers (GL Reports, Aging, Trial Balance)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right / Image & Quick Facts -->
+        <div class="flex flex-col items-center md:items-end text-center md:text-right">
+            <!-- Image or placeholder -->
+            <div class="mb-6">
+                <img src="assets/images/313116607_926269805426747_4251839486118303445_n.jpg" alt="Anas Ali"
+                    *ngIf="!imageError" class="w-56 h-56 rounded-full object-cover shadow-2xl ring-4 ring-orange-400" />
+                <div *ngIf="imageError"
+                    class="w-56 h-56 rounded-full bg-gradient-to-br from-orange-500 to-pink-500 flex items-center justify-center text-white text-4xl font-bold shadow-2xl ring-4 ring-orange-400">
+                    AA</div>
+            </div>
+
+            <div class="w-full md:w-80 bg-slate-800/60 p-6 rounded-lg">
+                <h4 class="text-lg font-semibold text-white">Quick Facts</h4>
+                <ul class="mt-3 text-gray-200 space-y-2 text-sm text-left">
+                    <li><strong>Location:</strong> Karachi, Pakistan</li>
+                    <li><strong>Age:</strong> 24 Years</li>
+                    <li><strong>Availability:</strong> Open to opportunities</li>
+                </ul>
+            </div>
+
+            <div class="w-full md:w-80 mt-6 bg-slate-800/40 p-4 rounded-lg">
+                <h4 class="text-sm font-semibold text-white">Technical Skills</h4>
+                <div class="mt-3 flex flex-wrap gap-2">
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">Angular</span>
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">ASP.NET Core</span>
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">PostgreSQL / SQL Server</span>
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">Ng-Zorro</span>
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">REST APIs</span>
+                    <span class="px-3 py-1 text-sm rounded-full bg-white/10">GitHub</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Sections -->
+    <div @fadeSlide class="max-w-6xl mx-auto mt-12 grid gap-6 md:grid-cols-3">
+        <div class="bg-slate-800/60 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-white">Selected Modules</h3>
+            <ul class="mt-3 text-gray-200 list-disc ml-5 space-y-1">
+                <li>GL Report Detail</li>
+                <li>Aging Report</li>
+                <li>Trial Balance</li>
+                <li>Receivable Aging</li>
+                <li>SKU Sale Reports</li>
+            </ul>
+        </div>
+
+        <div class="bg-slate-800/60 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-white">Education</h3>
+            <ul class="mt-3 text-gray-200 space-y-1">
+                <li>Matriculation — Knowledge Inn Grammar School Karachi</li>
+                <li>Intermediate — premier government college karachi</li>
+            </ul>
+        </div>
+
+        <div class="bg-slate-800/60 p-6 rounded-lg">
+            <h3 class="text-xl font-semibold text-white">Personal</h3>
+            <p class="mt-3 text-gray-200">Name: Anas Ali<br />Angular Full Stack Developer with strong collaboration
+                skills across BA and QA teams.</p>
+        </div>
+    </div>
+</section>
